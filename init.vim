@@ -103,8 +103,6 @@ Plug 'mhinz/vim-startify'
 " File Tree
 Plug 'scrooloose/nerdtree'
 
-" Debuger
-"Plug 'puremourning/vimspector', {'do':'./install_gadget.py --enable-c'}
 call plug#end()
 
 "
@@ -149,12 +147,12 @@ let NERDTreeMapChangeRoot = "y"
 "=====
 "=fzf=
 "=====
-nmap <a-f> :FZF<CR>
+nmap <a-F> :FZF<CR>
 
 "========
 "=rnvimr=
 "========
-nmap <a-a> :RnvimrToggle<CR>
+nmap <a-R> :RnvimrToggle<CR>
 
 "=========
 "=coc.vim=
@@ -177,11 +175,3 @@ function! s:check_back_space() abort
 endfunction
 nmap ct :CocCommand translator.popup<CR>
 
-
-"============
-"=vimspector=
-"============
-"function! s:read_template_into_buffer(template)
-"    execute '0r ~/.config/nvim/vimspector_json'
-"endfunction
-"let g:vimspector_enable_mappings='HUMAN'
